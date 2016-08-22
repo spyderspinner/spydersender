@@ -1,1 +1,1 @@
-simple sypder mailer!
+simple sypder mailer
