@@ -1,1 +1,1 @@
-simple js mailer
+simple js mailer.
