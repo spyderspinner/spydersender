@@ -2,12 +2,13 @@ var express = require('express')
   , http = require('http')
   , path = require('path');
 
-app = module.exports = express.createServer()
+module.exports = function (app) {
 
-app.get('/', index.html);
+  app.get('/', function (req, res, next) {
+    res.render('index')
+  });
 
-exports.index = function(req, res){
-  res.sendfile('index.html');
 };
+
 
 console.log("Hello Spyder!!")
