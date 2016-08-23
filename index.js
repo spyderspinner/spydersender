@@ -1,5 +1,5 @@
 var express = require('express')
-  , app = express();
+  , app = express()
   , http = require('http')
   , path = require('path');
 // require('./index')(app)
