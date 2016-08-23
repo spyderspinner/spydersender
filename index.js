@@ -3,7 +3,7 @@ var express = require('express')
   , path = require('path');
 
 var app = express();
-require('./routes/index')(app)
+// require('./index')(app)
 
 // module.exports = function (app) {
 
