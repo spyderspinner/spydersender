@@ -2,7 +2,6 @@ console.log("Hello Spyder!!");
 
 var express = require('express')
   , http = require('http')
-  , favicon = require('favicon')
   , path = require('path');
 
 var app = express();
