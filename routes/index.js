@@ -5,13 +5,13 @@ var express = require('express')
 var app = express();
 require('./routes/index')(app)
 
-module.exports = function (app) {
+// module.exports = function (app) {
 
   app.get('/', function (req, res, next) {
     res.render('index')
   });
 
-};
+// };
 
 
 console.log("Hello Spyder!!")
