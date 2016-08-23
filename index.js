@@ -1,3 +1,13 @@
-console.log("Hello Spyder!!")
+var express = require('express')
+  , routes = require('./routes')
+  , http = require('http')
+  , path = require('path')
+  , firebase = require('firebase');
 
-index.get('/', index.html);
+app.get('/', index.html);
+
+exports.index = function(req, res){
+  res.sendfile('index.html');
+};
+
+console.log("Hello Spyder!!")

@@ -4,7 +4,8 @@
   "description": "simple sypder mailer",
   "main": "genmailer.js",
   "dependencies": {
-    "nodemailer": "~2.5.0"
+    "nodemailer": "~2.5.0",
+    "express": "^4.14.0"
   },
   "devDependencies": {},
   "scripts": {
