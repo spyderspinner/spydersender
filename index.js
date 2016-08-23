@@ -10,6 +10,7 @@ app.set('title', 'SpinnerSender');
 app.set('views', __dirname + '/views'); // general config
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
+// app.set('view engine', 'jade');
 
 
 app.listen(3000, function () {
@@ -43,7 +44,7 @@ function checkInfo() {
 
 app.get('/', function (req, res) {
   // res.send('See me here!');
-  res.render('index')
+  res.render('index.html')
   // buildIntakeForm;
 });
 
