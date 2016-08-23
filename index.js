@@ -1,3 +1,3 @@
 console.log("Hello Spyder!!")
 
-app.get('/', index.html);
+index.get('/', index.html);
