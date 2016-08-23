@@ -1,0 +1,23 @@
+{
+  "name": "genSender",
+  "version": "0.0.0",
+  "description": "simple sypder mailer",
+  "main": "genmailer.js",
+  "dependencies": {
+    "nodemailer": "~2.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spyderspinner/spydersender.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spyderspinner/spydersender/issues"
+  },
+  "homepage": "https://github.com/spyderspinner/spydersender"
+}
