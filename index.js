@@ -1,7 +1,6 @@
 var express = require('express')
   , http = require('http')
-  , path = require('path')
-  , firebase = require('firebase');
+  , path = require('path');
 
 app.get('/', index.html);
 
