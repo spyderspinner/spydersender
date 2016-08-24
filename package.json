@@ -2,10 +2,14 @@
   "name": "genSender",
   "version": "0.0.0",
   "description": "simple sypder mailer",
-  "main": "genmailer.js",
+  "main": "index.js",
   "dependencies": {
     "nodemailer": "~2.5.0",
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "jade": "1.11.0",
+    "html": "1.0.0",
+    "ejs": "2.5.1"
+
   },
   "devDependencies": {},
   "scripts": {
