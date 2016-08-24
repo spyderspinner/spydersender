@@ -11,29 +11,32 @@ app.set('views', __dirname + '/views'); // general config
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
+// import http from 'http';
+// http.createServer((req, res) => {})
+
 app.listen(3000, function () {
   console.log('Listening on port!');
 });
 
-function checkInfo() {
-  console.log("found me finding you");
-  // console.log(req.params)
-};
+// function checkInfo() {
+//   console.log("found me finding you");
+//   // console.log(req.params)
+// };
 
 app.get('/', function (req, res) {
   res.render('index.html')
 });
 
-// $ = cheerio.load('<button id="hitSend">...</button>');
-
-var cheerio = require('cheerio'),
-    $ = cheerio.load('<button id="hitSend">...</button>');
-
+var $ = require('jquery/src/core');
+// require('jquery/src/init');
+// require('jquery/src/manipulation');
+$('body').append('<p>Success!</p>')
 
 $(function() {
-  $("#hitSend").on("click", function() {
-    console.log('heard your send')
-  })
+  console.log('we have jquery');
+  // $("#hitSend").on("click", function() {
+  //   console.log('heard your send');
+  // })
 })
 
 // app.get('/takeInfo', function(req, res, checkInfo) {
