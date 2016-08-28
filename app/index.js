@@ -1,68 +1,41 @@
 console.log("Hello Spyder!!");
 
 var express = require('express');
-  // , http = require('http');
-  // , path = require('path');
-
 var app = express();
-
+var emailprov;
+app.use(express.static(__dirname + '/views'));
 app.set('title', 'SpinnerSender');
-app.set('views', __dirname + '/views'); // general config
-app.engine('html', require('ejs').renderFile);
-app.set('view engine', 'html');
-
-// import http from 'http';
-// http.createServer((req, res) => {})
 
 app.listen(3000, function () {
   console.log('Listening on port!');
-});
 
-// function checkInfo() {
-//   console.log("found me finding you");
-//   // console.log(req.params)
-// };
+  function prompt(question, callback) {
+    var stdin = process.stdin,
+        stdout = process.stdout;
+
+    stdin.resume();
+    stdout.write(question);
+
+    stdin.once('data', function (data) {
+        callback(data.toString().trim());
+    });
+  }
+
+  prompt("What email address?", function (input) {
+    console.log(input);
+    return updatePage(input);
+    // function (input) {
+    //   app.get('/', function(req, res) {
+    //     res.write(input);
+    //     res.end();
+    //   })
+    // }
+  });
+
+});
 
 app.get('/', function (req, res) {
-  res.render('index.html')
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.write("Is anyone in here?");
+  res.end();
 });
-
-var $ = require('jquery/src/core');
-// require('jquery/src/init');
-// require('jquery/src/manipulation');
-$('body').append('<p>Success!</p>')
-
-$(function() {
-  console.log('we have jquery');
-  // $("#hitSend").on("click", function() {
-  //   console.log('heard your send');
-  // })
-})
-
-// app.get('/takeInfo', function(req, res, checkInfo) {
-//   // res.send('thanks for that');
-//   checkInfo(req.params)
-//   // console.log(req);
-// })
-
-// app.configure(function(){
-//    app.set('views', __dirname + '/views');
-//    app.set('views');
-//    // => "/absolute/path/to/views"
-
-//    // app.enable('some feature');
-//    // same as app.set('some feature', true);
-
-//    // app.disable('some feature');
-//    // same as app.set('some feature', false);
-
-//    // app.enabled('some feature')
-//    // => false
-
-//    app.configure(function(){
-//        app.use(express.methodOverride());
-//        app.use(express.bodyParser());
-//        app.use(app.router);
-//    });
-
-// });
